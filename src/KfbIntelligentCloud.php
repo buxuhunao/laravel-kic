@@ -37,7 +37,7 @@ class KfbIntelligentCloud extends Client
     // 解绑设备
     public function unbind($uuid)
     {
-        $uri = '/api/client/bind';
+        $uri = '/api/client/unbind';
 
         return $this->post($uri, ['json' => ['uuid' => $uuid]]);
     }

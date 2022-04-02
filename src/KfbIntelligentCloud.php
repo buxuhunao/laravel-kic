@@ -19,7 +19,7 @@ class KfbIntelligentCloud extends Client
     |--------------------------------------------------------------------------
     */
     // code换取uuid
-    public function getUuid($code)
+    public function getUuid($code): Http\Response
     {
         $uri = '/api/client/get_uuid';
 
@@ -27,7 +27,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 绑定设备
-    public function bind($uuid, $name, $remark = '')
+    public function bind($uuid, $name, $remark = ''): Http\Response
     {
         $uri = '/api/client/bind';
 
@@ -35,7 +35,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 解绑设备
-    public function unbind($uuid)
+    public function unbind($uuid): Http\Response
     {
         $uri = '/api/client/unbind';
 
@@ -43,7 +43,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 获取设备信息
-    public function info($uuid)
+    public function info($uuid): Http\Response
     {
         $uri = '/api/client/info';
 
@@ -51,7 +51,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 获取设备列表
-    public function list($page = 1)
+    public function list($page = 1): Http\Response
     {
         $uri = '/api/client/list';
 
@@ -59,7 +59,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 修改设备绑定信息
-    public function edit($uuid, $name, $remark = null)
+    public function edit($uuid, $name, $remark = null): Http\Response
     {
         $uri = '/api/client/edit';
         $option = array_filter(compact('uuid', 'name', 'remark'));
@@ -73,7 +73,7 @@ class KfbIntelligentCloud extends Client
     |--------------------------------------------------------------------------
     */
     // 获取打印机能力
-    public function capability($uuid)
+    public function capability($uuid): Http\Response
     {
         $uri = '/api/print/capability';
 
@@ -81,7 +81,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 创建打印任务
-    public function create($params)
+    public function create($params): Http\Response
     {
         $uri = '/api/print/create';
 
@@ -89,7 +89,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 取消打印机所有任务
-    public function cancel($uuid)
+    public function cancel($uuid): Http\Response
     {
         $uri = '/api/print/cancel';
 
@@ -97,7 +97,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 查询打印任务进度
-    public function process($uuid, $printUuid)
+    public function process($uuid, $printUuid): Http\Response
     {
         $uri = ' /api/print/info';
 
@@ -113,7 +113,7 @@ class KfbIntelligentCloud extends Client
     |--------------------------------------------------------------------------
     */
     // 重启盒子
-    public function reboot($uuid)
+    public function reboot($uuid): Http\Response
     {
         $uri = '/api/control/reboot';
 
@@ -121,7 +121,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 清洗打印机喷头
-    public function headClean($uuid)
+    public function headClean($uuid): Http\Response
     {
         $uri = '/api/control/head_clean';
 
@@ -129,7 +129,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 大墨量清洗打印机喷头
-    public function flush($uuid)
+    public function flush($uuid): Http\Response
     {
         $uri = '/api/control/power_ink_flush';
 
@@ -137,7 +137,7 @@ class KfbIntelligentCloud extends Client
     }
 
     // 打印喷嘴检查页
-    public function nozzleCheck($uuid)
+    public function nozzleCheck($uuid): Http\Response
     {
         $uri = '/api/control/nozzle_check';
 

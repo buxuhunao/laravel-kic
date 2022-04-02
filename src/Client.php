@@ -101,7 +101,7 @@ class Client
         $this->setHttpClientOptions(\array_replace_recursive([
             'base_uri' => self::BASE_URI,
             'headers' => [
-                'User-Agent' => 'buxuhunao/kfb-cloud:'. ClientInterface::MAJOR_VERSION,
+                'User-Agent' => 'buxuhunao/laravel-kic:'. ClientInterface::MAJOR_VERSION,
             ],
         ], $config->get('guzzle', [])));
 

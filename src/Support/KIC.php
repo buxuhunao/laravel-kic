@@ -7,11 +7,12 @@ use Buxuhunao\Kic\KfbIntelligentCloud;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static Response getUuid(string $uuid)
+ * @method static Response getUuid(string $code)
  * @method static Response bind(string $uuid, string $name, ?string $remark = null)
  * @method static Response unbind(string $uuid)
  * @method static Response info(string $uuid)
  * @method static Response list(int $page)
+ * @method static Response edit(string $uuid, string $name, ?string $remark = null)
  * @method static Response capability(string $uuid)
  * @method static Response create(array $params)
  * @method static Response cancel(string $uuid)
